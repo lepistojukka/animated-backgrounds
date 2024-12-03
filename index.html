@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Background Gradients</title>
+    <style>
+        * {
+            margin: 20px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFFFFF; /* To contrast the sections */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section {
+            height: 100vh; /* Full view height */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 50px; /* Space between sections */
+        }
+
+        /* Section 1: Animated Gradient */
+        .section-1 {
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+            background-size: 400% 400%;
+            animation: gradientAnimation 8s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Section 2: Striped Animation */
+        .section-2 {
+            background: repeating-linear-gradient(
+                45deg,
+                #ff758c,
+                #ff758c 100px,
+                #ff7eb3 100px,
+                #ff7eb3 200px
+            );
+            background-size: 200% 200%;
+            animation: stripeAnimation 4s linear infinite;
+        }
+
+        @keyframes stripeAnimation {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        /* Section 3: Pulsing Radial Gradient */
+        .section-3 {
+            background: radial-gradient(circle, #1e3c72, #2a5298, #000000);
+            background-size: 200% 200%;
+            animation: radialPulse 6s ease-in-out infinite;
+        }
+
+        @keyframes radialPulse {
+            0%, 100% {
+                background-size: 150% 150%;
+            }
+            50% {
+                background-size: 200% 200%;
+            }
+        }
+
+        /* Section 4: Wave Animation */
+        .section-4 {
+            background: linear-gradient(135deg, #89fffd, #ef32d9);
+            background-size: 200% 200%;
+            animation: waveAnimation 3s ease-in-out infinite;
+        }
+
+        @keyframes waveAnimation {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* Section 5: Flickering Gradient */
+        .section-5 {
+            background: linear-gradient(90deg, #ff6e7f, #bfe9ff);
+            background-size: 200% 200%;
+            animation: flickerAnimation 5s ease-in-out infinite alternate;
+        }
+
+        @keyframes flickerAnimation {
+            0% {
+                background-position: 0% 50%;
+                opacity: 0.9;
+            }
+            50% {
+                opacity: 0.6;
+            }
+            100% {
+                background-position: 100% 50%;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section section-1">Gradient Animation</div>
+        <div class="section section-2">Striped Animation</div>
+        <div class="section section-3">Radial Pulse</div>
+        <div class="section section-4">Wave Animation</div>
+        <div class="section section-5">Flickering Gradient</div>
+    </div>
+</body>
+</html>
