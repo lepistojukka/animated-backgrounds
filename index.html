@@ -56,28 +56,6 @@
             }
         }
 
-        /* Section 2: Striped Animation */
-        .section-2 {
-            background: repeating-linear-gradient(
-                45deg,
-                #ff758c,
-                #ff758c 100px,
-                #ff7eb3 100px,
-                #ff7eb3 200px
-            );
-            background-size: 200% 200%;
-            animation: stripeAnimation 4s linear infinite;
-        }
-
-        @keyframes stripeAnimation {
-            0% {
-                background-position: 0% 0%;
-            }
-            100% {
-                background-position: 100% 100%;
-            }
-        }
-
         /* Section 3: Pulsing Radial Gradient */
         .section-3 {
             background: radial-gradient(circle, #1e3c72, #2a5298, #000000);
@@ -135,7 +113,6 @@
 <body>
     <div class="container">
         <div class="section section-1">Gradient Animation</div>
-        <div class="section section-2">Striped Animation</div>
         <div class="section section-3">Radial Pulse</div>
         <div class="section section-4">Wave Animation</div>
         <div class="section section-5">Flickering Gradient</div>
